@@ -1,0 +1,261 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: rgb(177, 3, 177);
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #b2b2ae;
+    border-radius: 5px;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+/* Team Section */
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgb(177, 3, 177);
+    transition: transform 0.3s ease;
+}
+
+.team:hover {
+    transform: translateY(-5px);
+}
+
+.team h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+
+/* Calendar Layout */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px; /* Increased gap between grid items */
+    padding: 10px;
+    justify-items: center; /* Center items in grid */
+}
+
+#calendar div {
+    width: 60px; /* Increased width */
+    height: 60px; /* Increased height */
+    background-color: #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover effect */
+#calendar div:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+/* Attendance Status Styles */
+.present {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.sick {
+    background-color: #F44336; /* Red */
+    color: white;
+}
+
+.paid {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+
+.weekoff {
+    background-color: #FF9800; /* Orange */
+    color: white;
+}
+
+/* Attendance Status Section */
+.attendance-status {
+    margin-top: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of status items */
+}
+
+.attendance-status p {
+    margin: 0 15px; /* Space between status items */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for status items */
+    transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.attendance-status p:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #calendar {
+        grid-template-columns: repeat(3, 1fr); /* Change to 3 columns on small screens */
+    }
+
+    #calendar div {
+        width: 40px; /* Decrease size on small screens */
+        height: 40px; /* Decrease size on small screens */
+    }
+
+    .attendance-status {
+        flex-direction: column; /* Stack status items vertically */
+    }
+
+    .attendance-status p {
+        margin: 5px 0; /* Space between status items */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .sidebar h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .sidebar ul li a {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .attendance-status {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.task-chart-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.task-chart-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.task-chart-card h4 {
+    font-size: 20px;
+    color: #2980b9;
+    text-align: center;
+}
+
+#task-section canvas {
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+/* Adjust canvas size */
+#task-section canvas {
+    max-width: 300px; /* Decrease the max-width */
+    max-height: 300px; /* Decrease the max-height */
+    margin: 0 auto;
+    display: block;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 576px) {
+    #calendar {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
