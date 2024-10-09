@@ -88,54 +88,52 @@ h3 {
     font-size: 20px;
 }
 
-
-
 /* Calendar Layout */
 #calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 10px; /* Increased gap between grid items */
+    gap: 10px;
     padding: 10px;
-    justify-items: center; /* Center items in grid */
+    justify-items: center;
 }
 
 #calendar div {
-    width: 60px; /* Increased width */
-    height: 60px; /* Increased height */
+    width: 60px;
+    height: 60px;
     background-color: #e3e3e3;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover effect */
 #calendar div:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Attendance Status Styles */
 .present {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     color: white;
 }
 
 .sick {
-    background-color: #F44336; /* Red */
+    background-color: #F44336;
     color: white;
 }
 
 .paid {
-    background-color: #2196F3; /* Blue */
+    background-color: #2196F3;
     color: white;
 }
 
 .weekoff {
-    background-color: #FF9800; /* Orange */
+    background-color: #FF9800;
     color: white;
 }
 
@@ -145,70 +143,23 @@ h3 {
     font-size: 18px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping of status items */
+    flex-wrap: wrap;
 }
 
 .attendance-status p {
-    margin: 0 15px; /* Space between status items */
+    margin: 0 15px;
     padding: 10px;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for status items */
-    transition: background-color 0.3s ease; /* Transition for background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .attendance-status p:hover {
-    background-color: #f0f0f0; /* Change background on hover */
+    background-color: #f0f0f0;
 }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-    #calendar {
-        grid-template-columns: repeat(3, 1fr); /* Change to 3 columns on small screens */
-    }
-
-    #calendar div {
-        width: 40px; /* Decrease size on small screens */
-        height: 40px; /* Decrease size on small screens */
-    }
-
-    .attendance-status {
-        flex-direction: column; /* Stack status items vertically */
-    }
-
-    .attendance-status p {
-        margin: 5px 0; /* Space between status items */
-    }
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        min-height: auto;
-        padding: 10px;
-    }
-
-    .sidebar h2 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .sidebar ul li a {
-        text-align: center;
-        font-size: 16px;
-    }
-
-    .main-content {
-        padding: 15px;
-    }
-
-    .attendance-status {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+/* Task Progress Section */
 .task-chart-card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -230,32 +181,7 @@ h3 {
 }
 
 #task-section canvas {
-    margin-top: 20px;
-    animation: fadeIn 1.5s ease-in-out;
-}
-/* Adjust canvas size */
-#task-section canvas {
-    max-width: 300px; /* Decrease the max-width */
-    max-height: 300px; /* Decrease the max-height */
+    max-width: 300px;
+    max-height: 300px;
     margin: 0 auto;
-    display: block;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-@media (max-width: 576px) {
-    #calendar {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+    display: block
